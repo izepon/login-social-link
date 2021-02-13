@@ -9,7 +9,7 @@
 }
 
 body {
-    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    background: linear-gradient(45deg, #7abfee, #3e699bfb);
     background-repeat: no-repeat;
     min-height: 100vh;
     min-width: 100vw;
@@ -22,7 +22,7 @@ main.container {
     background: white;
     max-width: 600px;
     min-height: 40vh;
-    padding: 3rem;
+    padding: 2rem;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
 }
@@ -41,7 +41,7 @@ main h2::before {
     bottom: 3px;
     left: 0;
     border-radius: 8px;
-    background: linear-gradient(45deg, #8e2de2, #4a00e0); 
+    background: linear-gradient(45deg, #7abfee, #3e699bfb);
 }
 
 form {
@@ -51,7 +51,37 @@ form {
 
 .input-field {
     position: relative;
+}
 
+form .input-field:first-child {
+    margin-bottom: 1.5rem;
+}
+
+.input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #7abfee, #3e699bfb);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after {
+    transform: scaleX(1);
 }
 
 .input-field input {
@@ -67,7 +97,7 @@ form {
 form input[type="submit"] {
     margin-top: 2rem;
     padding: 0.4rem;
-    background: linear-gradient(to left, #4776E6, #8e54e9);
+    background: linear-gradient(to left, #7abfee, #3e699bfb);
     cursor: pointer;
     color:white;
     font-size: 0.9rem;
@@ -78,7 +108,7 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
     letter-spacing: 0.5px;
-    background: linear-gradient(to right, #4776E6, #8e54e9);
+    background: linear-gradient(to right, #7abfee, #3e699bfb);
 }
 
 .footer {
@@ -94,7 +124,7 @@ form input[type="submit"]:hover {
 }
 
 .footer .social-field {
-    padding: 0.4;
+    padding: 0.4rem;
     border-radius: 4px;
     font-size: 0.85rem;
     width: 100%;
